@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>V&R Co - Accounting with Confidence</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#">Team</a>
+<a href="contact.html">Contact</a>
+<a href="enquiry.html">Enquiry</a>
+</nav>
+
+</div>
+</header>
+
+
+<section class="hero">
+
+<div class="hero-slider">
+
+<img src="acct.jpg" class="slide active">
+<img src="tax.jpg" class="slide">
+<img src="gst.jpg" class="slide">
+
+</div>
+
+<div class="hero-text">
+<h1>Accounting with Confidence</h1>
+<p>Professional accounting, tax and advisory services for businesses.</p>
+<button>Book Consultation</button>
+</div>
+
+</section>
+
+
+<section id="services" class="services">
+
+<h2>Our Services</h2>
+
+<div class="service-grid">
+
+<div class="card">
+<h3>Audit & Assurance</h3>
+<p>Independent audits and financial statement verification.</p>
+</div>
+
+<div class="card">
+<h3>Tax Planning</h3>
+<p>Strategic tax planning for businesses and individuals.</p>
+</div>
+
+<div class="card">
+<h3>GST Compliance</h3>
+<p>GST filing, registration and advisory services.</p>
+</div>
+
+<div class="card">
+<h3>Business Consulting</h3>
+<p>Financial advisory and business growth strategies.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about" class="about">
+
+<h2>About V&R Co</h2>
+
+<p>
+V&R Co is a professional accounting firm providing audit,
+taxation and financial advisory services to businesses and individuals.
+Our mission is to deliver accurate financial insights with integrity and trust.
+</p>
+
+</section>
+
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-container">
+
+<div class="contact-card">
+
+<img src="vivek.png" class="profile-photo">
+
+<h3>V & R Co</h3>
+
+<p><strong>Experience of 24 years in Cost Audits and Consultancy</strong></p>
+
+<p>Email:
+<a href="mailto:viv_606@hotmail.com">viv_606@hotmail.com</a>
+</p>
+
+<p>Phone:
+<a href="tel:+918129168249">+91 81291 68249</a>
+</p>
+
+</div>
+
+
+<div class="map">
+
+<iframe
+width="100%"
+height="320"
+style="border:0"
+loading="lazy"
+allowfullscreen
+src="https://maps.google.com/maps?q=KMpeQ4cYQZMPaeqQ9&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+<p>© 2026 V&R Co | Accounting with Confidence</p>
+</footer>
+
+
+<a href="https://wa.me/918129168249" class="whatsapp-button" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+
+<script>
+
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function changeSlide(){
+
+slides[index].classList.remove("active");
+
+index++;
+
+if(index >= slides.length){
+index = 0;
+}
+
+slides[index].classList.add("active");
+
+}
+
+setInterval(changeSlide,4000);
+
+</script>
+
+</body>
+</html>
