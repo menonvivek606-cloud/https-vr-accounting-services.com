@@ -5,6 +5,10 @@
 <meta charset="UTF-8">
 <title>Contact - V&R Co</title>
 <link rel="stylesheet" href="styles.css">
+
+<!-- Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>
@@ -31,7 +35,6 @@
 
 <div class="contact-container">
 
-
 <div class="contact-card">
 
 <img src="vivek.png" class="profile-photo">
@@ -50,7 +53,6 @@
 
 </div>
 
-
 <div class="map">
 
 <iframe
@@ -66,19 +68,25 @@ src="https://maps.google.com/maps?q=KMpeQ4cYQZMPaeqQ9&output=embed">
 
 </div>
 
-
 <br><br>
-
 
 <h2>Send Us a Message</h2>
 
-<form class="contact-form">
+<!-- ✅ WORKING FORM -->
+<form class="contact-form"
+      action="https://formspree.io/f/xojkgrdk"
+      method="POST">
 
-<input type="text" placeholder="Your Name" required>
+<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Your Email" required>
+<input type="email" name="email" placeholder="Your Email" required>
 
-<textarea placeholder="Your Message" rows="5" required></textarea>
+<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+<!-- reCAPTCHA -->
+<div class="g-recaptcha" data-sitekey="6LfE7pUsAAAAAAH8RpNX3hukoB8VabDF5UARzzKs"></div>
+
+<br>
 
 <button type="submit">Send Message</button>
 
@@ -98,5 +106,4 @@ WhatsApp Us
 
 
 </body>
-
 </html>
