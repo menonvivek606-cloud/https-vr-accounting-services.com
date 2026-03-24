@@ -5,10 +5,6 @@
 <meta charset="UTF-8">
 <title>Contact - V&R Co</title>
 <link rel="stylesheet" href="styles.css">
-
-<!-- Google reCAPTCHA -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 </head>
 
 <body>
@@ -72,21 +68,13 @@ src="https://maps.google.com/maps?q=KMpeQ4cYQZMPaeqQ9&output=embed">
 
 <h2>Send Us a Message</h2>
 
-<!-- ✅ WORKING FORM -->
-<form class="contact-form"
-      action="https://formspree.io/f/xojkgrdk"
-      method="POST">
+<form class="contact-form">
 
-<input type="text" name="name" placeholder="Your Name" required>
+<input type="text" placeholder="Your Name" required>
 
-<input type="email" name="email" placeholder="Your Email" required>
+<input type="email" placeholder="Your Email" required>
 
-<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
-<!-- reCAPTCHA -->
-<div class="g-recaptcha" data-sitekey="6LfE7pUsAAAAAAH8RpNX3hukoB8VabDF5UARzzKs"></div>
-
-<br>
+<textarea placeholder="Your Message" rows="5" required></textarea>
 
 <button type="submit">Send Message</button>
 
