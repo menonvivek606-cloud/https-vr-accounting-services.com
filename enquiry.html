@@ -1,11 +1,7 @@
-
-​You​
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Contact - V&R Co</title>
+<title>Enquiry - V&R Co</title>
 <link rel="stylesheet" href="styles.css">
 
 <!-- Google reCAPTCHA -->
@@ -22,9 +18,11 @@
 
 <nav>
 <a href="index.html">Home</a>
-<a href="#">Services</a>
-<a href="#">About</a>
+<a href="index.html#about">About</a>
+<a href="index.html#services">Services</a>
+<a href="index.html#team">Team</a>
 <a href="contact.html">Contact</a>
+<a href="enquiry.html">Enquiry</a>
 </nav>
 
 </div>
@@ -33,64 +31,34 @@
 
 <section class="contact">
 
-<h1>Contact Us</h1>
+<h1>Send Us an Enquiry</h1>
 
-<div class="contact-container">
+<p>Please fill the form below and our team will get back to you shortly.</p>
 
-<div class="contact-card">
-
-<img src="vivek.png" class="profile-photo">
-
-<h3>V & R Co</h3>
-
-<p><strong>Experience of 24 years in Cost Audits and Consultancy</strong></p>
-
-<p>Email:
-<a href="mailto:viv_606@hotmail.com">viv_606@hotmail.com</a>
-</p>
-
-<p>Phone:
-<a href="tel:+918129168249">+91 81291 68249</a>
-</p>
-
-</div>
-
-<div class="map">
-
-<iframe
-width="100%"
-height="320"
-style="border:0"
-loading="lazy"
-allowfullscreen
-src="https://maps.google.com/maps?q=KMpeQ4cYQZMPaeqQ9&output=embed">
-</iframe>
-
-</div>
-
-</div>
-
-<br><br>
-
-<h2>Send Us a Message</h2>
-
-<!-- ✅ WORKING FORM -->
+<!-- ✅ UPDATED FORM -->
 <form class="contact-form"
-      action="https://formspree.io/f/xojkgrdk"
+      action="https://formspree.io/f/abcdxyz"
       method="POST">
 
-<input type="text" name="name" placeholder="Your Name" required>
+<!-- Optional subject -->
+<input type="hidden" name="_subject" value="New Enquiry from Website">
 
-<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="name" placeholder="Full Name" required>
 
-<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+<input type="email" name="email" placeholder="Email Address" required>
 
-<!-- reCAPTCHA -->
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<input type="text" name="subject" placeholder="Subject">
+
+<textarea name="message" rows="5" placeholder="Your Enquiry" required></textarea>
+
+<!-- Google reCAPTCHA -->
 <div class="g-recaptcha" data-sitekey="6LfE7pUsAAAAAAH8RpNX3hukoB8VabDF5UARzzKs"></div>
 
 <br>
 
-<button type="submit">Send Message</button>
+<button type="submit">Submit Enquiry</button>
 
 </form>
 
@@ -100,12 +68,6 @@ src="https://maps.google.com/maps?q=KMpeQ4cYQZMPaeqQ9&output=embed">
 <footer>
 <p>© 2026 V&R Co | Accounting with Confidence</p>
 </footer>
-
-
-<a href="https://wa.me/918129168249" class="whatsapp-button" target="_blank">
-WhatsApp Us
-</a>
-
 
 </body>
 </html>
