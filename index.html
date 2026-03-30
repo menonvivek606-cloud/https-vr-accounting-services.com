@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>VR & Co - Accounting with Confidence</title>
+<title>V&R Co - Accounting with Confidence</title>
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,36 +12,55 @@
 <body>
 
 <header>
-<div class="container">
 
-<img src="logo.png" class="logo">
+<div style="background:#fff; padding:10px 20px; display:flex; justify-content:space-between; align-items:center;">
 
-<nav>
-<a href="index.html">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#">Team</a>
-<a href="contact.html">Contact</a>
-<a href="enquiry.html">Enquiry</a>
-</nav>
+  <div style="display:flex; align-items:center; gap:20px;">
+    <img src="logo.jpeg" style="height:70px;">
+    <img src="cma.jpg" style="height:50px;">
+  </div>
+
+  <div style="color:#b30000; font-size:14px;">
+    <i class="fas fa-envelope"></i> 
+    <a href="mailto:mailus@vr-accounting-services.com"
+       onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mailus@vr-accounting-services.com','_blank')"
+       style="color:#b30000; text-decoration:none;">
+      mailus@vr-accounting-services.com
+    </a>
+
+    &nbsp;&nbsp;
+
+    <i class="fas fa-phone"></i> 
+    <a href="tel:+918921427172" style="color:#b30000; text-decoration:none;">
+      +91 89214 27172
+    </a>
+  </div>
 
 </div>
+
+<div style="background:#b30000; padding:10px; text-align:center;">
+  <a href="index.html" style="color:white; margin:0 15px;">Home</a>
+  <a href="#about" style="color:white; margin:0 15px;">About</a>
+  <a href="#services" style="color:white; margin:0 15px;">Services</a>
+  <a href="contact.html" style="color:white; margin:0 15px;">Contact</a>
+  <a href="enquiry.html" style="color:white; margin:0 15px;">Enquiry</a>
+</div>
+
 </header>
 
 
 <section class="hero">
 
 <div class="hero-slider">
-
 <img src="acct.jpg" class="slide active">
 <img src="tax.jpg" class="slide">
 <img src="gst1.jpg" class="slide">
-
 </div>
 
 <div class="hero-text">
 <h1>Accounting with Confidence</h1>
 <p>Professional accounting, tax and advisory services for businesses.</p>
+
 </div>
 
 </section>
@@ -53,23 +72,23 @@
 
 <div class="service-grid">
 
-<div class="card">
-<h3>Audit & Assurance</h3>
+<div class="card" onclick="scrollToSection('audit')">
+<h3>Audit Services</h3>
 <p>Independent audits and financial statement verification.</p>
 </div>
 
-<div class="card">
-<h3>Tax Planning</h3>
+<div class="card" onclick="scrollToSection('tax')">
+<h3>Taxation Services</h3>
 <p>Strategic tax planning for businesses and individuals.</p>
 </div>
 
-<div class="card">
+<div class="card" onclick="scrollToSection('corporate')">
 <h3>Corporate Filings</h3>
-<p>GST filing, registration and advisory services.</p>
+<p>Corporate filing, registration and advisory services.</p>
 </div>
 
-<div class="card">
-<h3>Business Consulting</h3>
+<div class="card" onclick="scrollToSection('consultancy')">
+<h3>Consultancy Services</h3>
 <p>Financial advisory and business growth strategies.</p>
 </div>
 
@@ -78,16 +97,68 @@
 </section>
 
 
-<section id="about" class="about">
+<!-- ===== SERVICE DETAIL SECTIONS ===== -->
 
-<h2>About VR & Co</h2>
-
-<p>
-VR & Co is a professional accounting firm providing audit,
-taxation and financial advisory services to businesses and individuals.
-Our mission is to deliver accurate financial insights with integrity and trust.
+<section id="audit" class="service-detail reveal">
+<div class="service-row">
+<img src="Audit Services.png" class="service-img">
+<div class="service-text">
+<h2>Audit Services</h2>
+<p>At Vivek Ramadas & Co, our audit services are designed to provide assurance, transparency, and actionable insights into your financial and operational processes. With a meticulous and risk-focused approach, we conduct cost audits, internal audits, and compliance reviews to ensure adherence to statutory requirements and industry standards.
+Leveraging deep expertise in audit and taxation, we help identify inefficiencies, strengthen internal controls, and enhance overall financial discipline. Our objective is not just compliance, but to add value by improving business performance and supporting informed decision-making.
 </p>
+</div>
+</div>
+</section>
 
+<section id="tax" class="service-detail reveal">
+<div class="service-row reverse">
+<img src="Taxation Services.png" class="service-img">
+<div class="service-text">
+<h2>Taxation Services</h2>
+<p>At Vivek Ramadas & Co, we offer comprehensive taxation services tailored to meet the evolving needs of businesses and individuals. Our approach combines in-depth technical knowledge with practical insights to ensure compliance with applicable tax laws while optimizing tax efficiency.
+We assist clients with Income Tax and GST matters, including tax planning, return filing, assessments, and advisory. With a strong focus on accuracy and timeliness, we help minimize tax risks, manage regulatory obligations, and support strategic financial decision-making.
+</p>
+</div>
+</div>
+</section>
+
+<section id="corporate" class="service-detail reveal">
+<div class="service-row">
+<img src="corporate filings.png" class="service-img">
+<div class="service-text">
+<h2>Corporate Filings</h2>
+<p>At Vivek Ramadas & Co, we provide end-to-end support for corporate filings, ensuring timely and accurate compliance with statutory and regulatory requirements. Our services cover filings with the Registrar of Companies (ROC) and other authorities, helping businesses stay compliant and avoid penalties.
+We assist with preparation and filing of annual returns, financial statements, and other mandatory disclosures, along with event-based filings such as changes in directors, share capital, and registered office. With a structured and detail-oriented approach, we ensure that all filings are completed efficiently and in accordance with applicable laws.
+Our focus is to simplify compliance, reduce administrative burden, and allow our clients to concentrate on their core business operations.
+</p>
+</div>
+</div>
+</section>
+
+<section id="consultancy" class="service-detail reveal">
+<div class="service-row reverse">
+<img src="Consultancy services.png" class="service-img">
+<div class="service-text">
+<h2>Consultancy Services</h2>
+<p>At Vivek Ramadas & Co, we provide strategic consultancy services aimed at enhancing business efficiency, profitability, and compliance. Our advisory approach is rooted in a deep understanding of cost structures, financial systems, and regulatory frameworks.
+We assist clients in areas such as cost optimization, pricing strategy, budgeting and forecasting, financial planning, and process improvement. By delivering practical, data-driven insights, we enable businesses to streamline operations, control costs, and make well-informed strategic decisions.
+Our goal is to act as a trusted advisor, supporting clients in navigating complex financial and operational challenges while driving sustainable growth.
+</p>
+</div>
+</div>
+</section>
+
+
+<section id="about" class="about">
+<h2>About VR & Co</h2>
+<p>
+At Vivek Ramadas & Co, we are a professional firm of Cost Accountants committed to delivering precise, insight-driven financial and cost management solutions. With a strong foundation in cost accounting principles and regulatory compliance, we assist businesses in achieving operational efficiency, financial clarity, and sustainable growth.
+Our practice is built on the core values of integrity, accuracy, and client-centricity. We work closely with organizations across industries to provide services including cost audits, pricing strategies, budgeting, cost optimization, and management consultancy. By combining technical expertise with a practical understanding of business dynamics, we help our clients make informed decisions and maintain a competitive edge.
+The firm is led by Vivek Ramadas, a seasoned professional with over 20 years of experience in Audit and Taxation matters. His extensive expertise and practical insights strengthen our ability to deliver reliable, compliant, and value-driven solutions to our clients.
+We focus on delivering tailored solutions that align with each client’s unique operational and financial objectives. Whether you are a growing enterprise or an established organization, Vivek Ramadas & Co serves as a trusted partner in navigating complex cost structures and regulatory requirements.
+
+</p>
 </section>
 
 
@@ -103,32 +174,33 @@ Our mission is to deliver accurate financial insights with integrity and trust.
 
 <h3>VR & Co</h3>
 
-<p><strong>Experience of more than 20 years in Cost Audits and Consultancy</strong></p>
+<p><strong>Experience of 20+ years in Audit and Taxation</strong></p>
 
 <p>Email:
-<a href="mailto:mailus@vr-accounting-services.com">mailto:mailus@vr-accounting-services.com</a>
+<a href="mailto:mailus@vr-accounting-services.com"
+onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mailus@vr-accounting-services.com','_blank')">
+mailus@vr-accounting-services.com
+</a>
 </p>
 
 <p>Phone:
 <a href="tel:+918921427172">+91 89214 27172</a>
 </p>
 
+<p>
+<strong>Address:</strong><br>
+CGRA 73, TC 42/1855,<br>
+Near Lavania Dental Centre,<br>
+Near SBI LHO, Poojappura,<br>
+Trivandrum, Kerala – 695012
+</p>
+
 </div>
 
-
 <div class="map">
-
-<iframe
-width="100%"
-height="320"
-style="border:0"
-loading="lazy"
-allowfullscreen
-<a href="https://www.google.com/maps?q=8.492970, 76.974900"target="_blank"
-Open in Maps
-</a>
+<iframe width="100%" height="320" style="border:0"
+src="https://www.google.com/maps?q=8.49747,76.98144&output=embed">
 </iframe>
-
 </div>
 
 </div>
@@ -137,7 +209,7 @@ Open in Maps
 
 
 <footer>
-<p>© 2026 VR & Co | Accounting with Confidence</p>
+<p>© 2026 V&R Co | Accounting with Confidence</p>
 </footer>
 
 
@@ -147,26 +219,46 @@ Open in Maps
 
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-let slides = document.querySelectorAll(".slide");
-let index = 0;
+  let slides = document.querySelectorAll(".slide");
+  let index = 0;
 
-function changeSlide(){
+  function changeSlide() {
+    slides[index].classList.remove("active");
 
-slides[index].classList.remove("active");
+    index++;
+    if (index >= slides.length) {
+      index = 0;
+    }
 
-index++;
+    slides[index].classList.add("active");
+  }
 
-if(index >= slides.length){
-index = 0;
-}
+  setInterval(changeSlide, 4000);
 
-slides[index].classList.add("active");
+  // Smooth scroll
+  window.scrollToSection = function(id){
+    document.getElementById(id).scrollIntoView({ behavior:'smooth' });
+  }
 
-}
+  // Reveal animation
+  function revealOnScroll(){
+    let reveals = document.querySelectorAll(".reveal");
 
-setInterval(changeSlide,4000);
+    for(let i=0;i<reveals.length;i++){
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
 
+      if(elementTop < windowHeight - 100){
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+
+});
 </script>
 
 </body>
