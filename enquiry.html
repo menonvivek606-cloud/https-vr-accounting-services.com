@@ -2,46 +2,83 @@
 <html>
 <head>
 <title>Enquiry - V&R Co</title>
-<link rel="stylesheet" href="styles.css">
 
-<!-- Google reCAPTCHA -->
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- ✅ REQUIRED FOR NETLIFY CAPTCHA -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-<div class="container">
 
-<img src="logo.png" class="logo">
+<!-- TOP WHITE BAR -->
+<div style="background:#fff; padding:10px 20px; display:flex; justify-content:space-between; align-items:center;">
 
-<nav>
-<a href="index.html">Home</a>
-<a href="index.html#about">About</a>
-<a href="index.html#services">Services</a>
-<a href="index.html#team">Team</a>
-<a href="contact.html">Contact</a>
-<a href="enquiry.html">Enquiry</a>
-</nav>
+  <!-- LEFT -->
+  <div style="display:flex; align-items:center; gap:20px;">
+    <img src="logo.jpeg" style="height:70px;">
+    <img src="cma.jpg" style="height:50px;">
+  </div>
+
+  <!-- RIGHT -->
+  <div style="color:#b30000; font-size:14px;">
+
+    <i class="fas fa-envelope"></i> 
+    <a href="mailto:mailus@vr-accounting-services.com"
+       onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mailus@vr-accounting-services.com','_blank')"
+       style="color:#b30000; text-decoration:none;">
+      mailus@vr-accounting-services.com
+    </a>
+
+    &nbsp;&nbsp;
+
+    <i class="fas fa-phone"></i> 
+    <a href="tel:+918921427172" style="color:#b30000; text-decoration:none;">
+      +91 89214 27172
+    </a>
+
+  </div>
 
 </div>
+
+<!-- RED NAV BAR -->
+<div style="background:#b30000; padding:10px; text-align:center;">
+
+  <a href="index.html" style="color:white; margin:0 15px; text-decoration:none;">Home</a>
+  <a href="index.html#about" style="color:white; margin:0 15px; text-decoration:none;">About</a>
+  <a href="index.html#services" style="color:white; margin:0 15px; text-decoration:none;">Services</a>
+  <a href="contact.html" style="color:white; margin:0 15px; text-decoration:none;">Contact</a>
+  <a href="enquiry.html" style="color:white; margin:0 15px; text-decoration:none;">Enquiry</a>
+
+</div>
+
 </header>
 
 
+<!-- ENQUIRY SECTION -->
 <section class="contact">
 
 <h1>Send Us an Enquiry</h1>
 
 <p>Please fill the form below and our team will get back to you shortly.</p>
 
-<!-- ✅ UPDATED FORM -->
 <form class="contact-form"
-      action="https://formspree.io/f/xojkgrdk"
-      method="POST">
+      name="enquiry"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field">
 
-<!-- Optional subject -->
-<input type="hidden" name="_subject" value="New Enquiry from Website">
+<input type="hidden" name="form-name" value="enquiry">
+
+<!-- Honeypot spam protection -->
+<p style="display:none">
+<label>Don’t fill this out if you're human: <input name="bot-field"></label>
+</p>
 
 <input type="text" name="name" placeholder="Full Name" required>
 
@@ -53,8 +90,8 @@
 
 <textarea name="message" rows="5" placeholder="Your Enquiry" required></textarea>
 
-<!-- Google reCAPTCHA -->
-<div class="g-recaptcha" data-sitekey="6LcrIZYsAAAAADmhGoVT5cgpbiUjYXWTECdARkbo"></div>
+<!-- ✅ NETLIFY CAPTCHA -->
+<div data-netlify-recaptcha="true"></div>
 
 <br>
 
