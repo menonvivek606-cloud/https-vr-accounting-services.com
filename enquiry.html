@@ -1,102 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Enquiry - VR & Co</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Accounting Services - Enquiry</title>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-<header>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
 
-<!-- TOP WHITE BAR -->
-<div style="background:#fff; padding:10px 20px; display:flex; justify-content:space-between; align-items:center;">
+        .container {
+            width: 450px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
 
-  <!-- LEFT -->
-  <div style="display:flex; align-items:center; gap:20px;">
-    <img src="logo.jpeg" style="height:70px;">
-    <img src="cma.jpg" style="height:50px;">
-  </div>
+        h2 {
+            text-align: center;
+        }
 
-  <!-- RIGHT -->
-  <div style="color:#b30000; font-size:14px;">
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
 
-    <i class="fas fa-envelope"></i> 
-    <a href="mailto:mailus@vr-accounting-services.com"
-       onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mailus@vr-accounting-services.com','_blank')"
-       style="color:#b30000; text-decoration:none;">
-      mailus@vr-accounting-services.com
-    </a>
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
 
-    &nbsp;&nbsp;
+        button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
 
-    <i class="fas fa-phone"></i> 
-    <a href="tel:+918921427172" style="color:#b30000; text-decoration:none;">
-      +91 89214 27172
-    </a>
+        button:hover {
+            background-color: #1a252f;
+        }
 
-  </div>
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
 
+<body>
+
+<div class="container">
+    <h2>Enquiry Form</h2>
+
+    <form id="enquiryForm" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+        <input type="text" id="subject" placeholder="Subject" required>
+        <textarea id="enquiry" placeholder="Your Enquiry" required></textarea>
+
+        <!-- reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+        <div id="error"></div>
+
+        <button type="submit">Submit</button>
+    </form>
 </div>
 
-<!-- RED NAV BAR -->
-<div style="background:#b30000; padding:10px; text-align:center;">
+<script>
+function validateForm() {
+    const captchaResponse = grecaptcha.getResponse();
+    const errorDiv = document.getElementById("error");
 
-  <a href="index.html" style="color:white; margin:0 15px; text-decoration:none;">Home</a>
-  <a href="index.html#about" style="color:white; margin:0 15px; text-decoration:none;">About</a>
-  <a href="index.html#services" style="color:white; margin:0 15px; text-decoration:none;">Services</a>
-  <a href="contact.html" style="color:white; margin:0 15px; text-decoration:none;">Contact</a>
-  <a href="enquiry.html" style="color:white; margin:0 15px; text-decoration:none;">Enquiry</a>
+    if (captchaResponse.length === 0) {
+        errorDiv.innerHTML = "Please complete the CAPTCHA verification.";
+        return false;
+    }
 
-</div>
-
-</header>
-
-
-<!-- ENQUIRY SECTION -->
-<section class="contact">
-
-<h1>Send Us an Enquiry</h1>
-
-<p>Please fill the form below and our team will get back to you shortly.</p>
-
-<form class="contact-form"
-      name="enquiry"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field">
-
-<input type="hidden" name="form-name" value="enquiry">
-
-<!-- Honeypot spam protection -->
-<p style="display:none">
-<label>Don’t fill this out if you're human: <input name="bot-field"></label>
-</p>
-
-<input type="text" name="name" placeholder="Full Name" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="tel" name="phone" placeholder="Phone Number">
-
-<input type="text" name="subject" placeholder="Subject">
-
-<textarea name="message" rows="5" placeholder="Your Enquiry" required></textarea>
-
-<!-- ✅ NETLIFY CAPTCHA -->
-<div data-netlify-recaptcha="true"></div>
-
-<br>
-
-<button type="submit">Submit Enquiry</button>
-
-</form>
-
-</section>
-
-
-<footer>
-<p>© 2026 VR & Co | Accounting with Confidence</p>
-</footer>
+    errorDiv.innerHTML = "";
+    return true;
+}
+</script>
 
 </body>
 </html>
